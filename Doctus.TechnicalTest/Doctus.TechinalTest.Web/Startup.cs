@@ -1,12 +1,14 @@
-﻿namespace Doctus.TechnicalTest.API
+namespace Doctus.TechinalTest.Web
 {
-    using System.IO;
-    using AutoMapper;
-    using Doctus.TechnicalTest.API.DependencyInjection;
+    using DependencyInjection;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.SpaServices.AngularCli;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using System;
+    using System.IO;
 
     public class Startup
     {
@@ -26,20 +28,14 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // In production, the Angular files will be served from this directory
+            services.AddSpaStaticFiles(configuration =>
             {
-                options.AddPolicy("CorsPolicy",
-                    builder => builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
+                configuration.RootPath = "ClientApp/dist";
             });
 
-            services.AddMvc();
-
-            services.AddAutoMapper();
-
-            // .NET Native DI Abstraction
             RegisterServices(services);
         }
 
@@ -50,8 +46,36 @@
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
 
-            app.UseMvc();
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action=Index}/{id?}");
+            });
+
+            app.UseSpa(spa =>
+            {
+                // To learn more about options for serving an Angular SPA from ASP.NET Core,
+                // see https://go.microsoft.com/fwlink/?linkid=864501
+
+                spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.Options.StartupTimeout = new TimeSpan(0, 0, 80);
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            });
+
+            
         }
 
         private void RegisterServices(IServiceCollection services)

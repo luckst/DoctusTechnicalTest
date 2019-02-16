@@ -27,12 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Doctus.TechnicalTest\Doctus.TechnicalTest.Application\Doctus.TechnicalTest.Application.csproj" />
-    <ProjectReference Include="..\Doctus.TechnicalTest\Doctus.TechnicalTest.Domain.Entities\Doctus.TechnicalTest.Domain.Entities.csproj" />
-    <ProjectReference Include="..\Doctus.TechnicalTest\Doctus.TechnicalTest.Domain.Test\Doctus.TechnicalTest.Domain.Test.csproj" />
-    <ProjectReference Include="..\Doctus.TechnicalTest\Doctus.TechnicalTest.Domain\Doctus.TechnicalTest.Domain.csproj" />
-    <ProjectReference Include="..\Doctus.TechnicalTest\Doctus.TechnicalTest.Infrastructure.Data\Doctus.TechnicalTest.Infrastructure.Data.csproj" />
-    <ProjectReference Include="..\Doctus.TechnicalTest\Doctus.TechnicalTest.Infrastructure.Framework\Doctus.TechnicalTest.Infrastructure.Framework.csproj" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Application\Doctus.TechnicalTest.Application.csproj" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Domain.Entities\Doctus.TechnicalTest.Domain.Entities.csproj" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Domain\Doctus.TechnicalTest.Domain.csproj" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Infrastructure.Data\Doctus.TechnicalTest.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Infrastructure.Framework\Doctus.TechnicalTest.Infrastructure.Framework.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
