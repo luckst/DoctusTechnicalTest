@@ -28,12 +28,6 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
         /// <param name="services"></param>
         public void RegisterServices(IServiceCollection services, IConfigurationRoot configuration)
         {
-            // Build configuration
-            /*var configuration = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json", false)
-                .Build();*/
-
             services.AddSingleton(configuration);
 
             //Automapper
@@ -44,7 +38,6 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
-            //services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             // Add logging
             #region log
@@ -83,8 +76,6 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
                  )
                  .CreateLogger());
 
-            //var file = File.CreateText("C:/Docs/Serilog.txt");
-            //Serilog.Debugging.SelfLog.Enable(TextWriter.Synchronized(file));
             #endregion
 
 
@@ -108,7 +99,6 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddScoped<DbContext>(sp => sp.GetService<DBContext>());
-            //services.AddScoped<DBCatalogContext>();
 
             services.AddDbContext<DBContext>(options =>
             {
@@ -119,10 +109,6 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
                 // to replace the default OpenIddict entities.
                 //options.UseOpenIddict();
             });
-
-            //Auth0
-            //services.AddSingleton<IAuthorizationHandler, HasChannelAuthorizationHandler>();
-
         }
     }
 }
