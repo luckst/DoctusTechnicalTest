@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Infrastructure", "{5390E87D-D39B-444A-B178-3654DB7F0DFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1. Common", "4.1. Common", "{3AF76E66-2715-4CCE-8341-13E35DF84403}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechnicalTest.Infrastructure.Framework", "Doctus.TechnicalTest\Doctus.TechnicalTest.Infrastructure.Framework\Doctus.TechnicalTest.Infrastructure.Framework.csproj", "{94011D0C-3336-49A7-AD02-989A339F6A45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechnicalTest.Infrastructure.Data", "Doctus.TechnicalTest\Doctus.TechnicalTest.Infrastructure.Data\Doctus.TechnicalTest.Infrastructure.Data.csproj", "{12DB3DE2-248F-4A67-87B8-7A95EB981E2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{DB9738CF-ED6E-4898-9DA7-970E9482D1DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechnicalTest.Domain.Entities", "Doctus.TechnicalTest\Doctus.TechnicalTest.Domain.Entities\Doctus.TechnicalTest.Domain.Entities.csproj", "{D41CC46E-4878-449B-BC7F-75015C0CC075}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechnicalTest.Domain", "Doctus.TechnicalTest\Doctus.TechnicalTest.Domain\Doctus.TechnicalTest.Domain.csproj", "{1956D62F-FD56-4024-8A7B-4C4D649D4943}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechnicalTest.Domain.Test", "Doctus.TechnicalTest\Doctus.TechnicalTest.Domain.Test\Doctus.TechnicalTest.Domain.Test.csproj", "{BEE5CD99-57DE-4354-9D53-FFC11E498D17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{BC1C7E35-B5A5-4CE2-8E91-34B27E60E15C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechnicalTest.Application", "Doctus.TechnicalTest\Doctus.TechnicalTest.Application\Doctus.TechnicalTest.Application.csproj", "{B1D8494C-A348-4778-BBCD-BABB1A10BBAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{A46A7B4D-5EB6-4833-8607-5C8296F6AA84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctus.TechinalTest.Web", "Doctus.TechinalTest.Web\Doctus.TechinalTest.Web.csproj", "{F5C9350D-4586-4615-8271-635915C19A96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94011D0C-3336-49A7-AD02-989A339F6A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94011D0C-3336-49A7-AD02-989A339F6A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94011D0C-3336-49A7-AD02-989A339F6A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94011D0C-3336-49A7-AD02-989A339F6A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DB3DE2-248F-4A67-87B8-7A95EB981E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DB3DE2-248F-4A67-87B8-7A95EB981E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DB3DE2-248F-4A67-87B8-7A95EB981E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DB3DE2-248F-4A67-87B8-7A95EB981E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41CC46E-4878-449B-BC7F-75015C0CC075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41CC46E-4878-449B-BC7F-75015C0CC075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41CC46E-4878-449B-BC7F-75015C0CC075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41CC46E-4878-449B-BC7F-75015C0CC075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1956D62F-FD56-4024-8A7B-4C4D649D4943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1956D62F-FD56-4024-8A7B-4C4D649D4943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1956D62F-FD56-4024-8A7B-4C4D649D4943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1956D62F-FD56-4024-8A7B-4C4D649D4943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE5CD99-57DE-4354-9D53-FFC11E498D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE5CD99-57DE-4354-9D53-FFC11E498D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE5CD99-57DE-4354-9D53-FFC11E498D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE5CD99-57DE-4354-9D53-FFC11E498D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D8494C-A348-4778-BBCD-BABB1A10BBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D8494C-A348-4778-BBCD-BABB1A10BBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D8494C-A348-4778-BBCD-BABB1A10BBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D8494C-A348-4778-BBCD-BABB1A10BBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C9350D-4586-4615-8271-635915C19A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C9350D-4586-4615-8271-635915C19A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C9350D-4586-4615-8271-635915C19A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C9350D-4586-4615-8271-635915C19A96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3AF76E66-2715-4CCE-8341-13E35DF84403} = {5390E87D-D39B-444A-B178-3654DB7F0DFE}
+		{94011D0C-3336-49A7-AD02-989A339F6A45} = {3AF76E66-2715-4CCE-8341-13E35DF84403}
+		{12DB3DE2-248F-4A67-87B8-7A95EB981E2A} = {3AF76E66-2715-4CCE-8341-13E35DF84403}
+		{D41CC46E-4878-449B-BC7F-75015C0CC075} = {DB9738CF-ED6E-4898-9DA7-970E9482D1DC}
+		{1956D62F-FD56-4024-8A7B-4C4D649D4943} = {DB9738CF-ED6E-4898-9DA7-970E9482D1DC}
+		{BEE5CD99-57DE-4354-9D53-FFC11E498D17} = {DB9738CF-ED6E-4898-9DA7-970E9482D1DC}
+		{B1D8494C-A348-4778-BBCD-BABB1A10BBAE} = {BC1C7E35-B5A5-4CE2-8E91-34B27E60E15C}
+		{F5C9350D-4586-4615-8271-635915C19A96} = {A46A7B4D-5EB6-4833-8607-5C8296F6AA84}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9260D2F6-2822-40F9-9283-71A1CB7FD0C9}
+	EndGlobalSection
+EndGlobal
