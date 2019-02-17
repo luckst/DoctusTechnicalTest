@@ -18,6 +18,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="2.8.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,11 +28,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\models\activity.ts" />
+    <None Remove="ClientApp\src\app\models\hour.ts" />
+    <None Remove="ClientApp\src\app\models\user.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Doctus.TechnicalTest.Application\Doctus.TechnicalTest.Application.csproj" />
     <ProjectReference Include="..\Doctus.TechnicalTest.Domain.Entities\Doctus.TechnicalTest.Domain.Entities.csproj" />
     <ProjectReference Include="..\Doctus.TechnicalTest.Domain\Doctus.TechnicalTest.Domain.csproj" />
     <ProjectReference Include="..\Doctus.TechnicalTest.Infrastructure.Data\Doctus.TechnicalTest.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\Doctus.TechnicalTest.Infrastructure.Framework\Doctus.TechnicalTest.Infrastructure.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\models\activity.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\hour.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\user.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

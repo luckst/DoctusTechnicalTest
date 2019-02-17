@@ -1,5 +1,6 @@
 ﻿namespace Doctus.TechnicalTest.Infrastructure.Data.EntityFramework
 {
+    using Doctus.TechnicalTest.Domain.Entities;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using System;
@@ -40,5 +41,21 @@
             }
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .ToTable("Users");
+
+            modelBuilder.Entity<Activity>()
+                .ToTable("Activities");
+
+            modelBuilder.Entity<Hour>()
+                .ToTable("Hours");
+        }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Activity> Activities { get; set; }
+        public DbSet<Hour> Hours { get; set; }
     }
 }

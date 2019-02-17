@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Domain.Entities\Doctus.TechnicalTest.Domain.Entities.csproj" />
+    <ProjectReference Include="..\Doctus.TechnicalTest.Infrastructure.Framework\Doctus.TechnicalTest.Infrastructure.Framework.csproj" />
   </ItemGroup>
 
 </Project>

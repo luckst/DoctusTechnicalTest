@@ -15,6 +15,7 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Doctus.TechnicalTest.Domain.Entities\Doctus.TechnicalTest.Domain.Entities.csproj" />
     <ProjectReference Include="..\Doctus.TechnicalTest.Infrastructure.Framework\Doctus.TechnicalTest.Infrastructure.Framework.csproj" />
   </ItemGroup>
 </Project>

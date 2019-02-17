@@ -18,6 +18,7 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
     using Doctus.TechnicalTest.Infrastructure.Data.Repositories;
     using Microsoft.EntityFrameworkCore;
     using Doctus.TechnicalTest.Infrastructure.Data.EntityFramework;
+    using Doctus.TechnicalTest.Application.Services;
 
     public class NativeInjectorBootStrapper
     {
@@ -80,14 +81,13 @@ namespace Doctus.TechinalTest.Web.DependencyInjection
 
 
             // Application
-            //services.AddScoped<ISecurityService, SecurityService>();
+            services.AddScoped<ISecurityService, SecurityService>();
+            services.AddScoped<IActivityService, ActivityService>();
+            services.AddScoped<IHourService, HourService>();
 
             //Domain
-            //services.AddScoped<IChannelService, ChannelService>();
 
             //Repositories
-            //services.AddScoped<IProductChannelRepository, ProductChannelRepository>();
-            //services.AddScoped<IScheduledTaskHistoryRepository, ScheduledTaskHistoryRepository>();
 
             // Infrastructure
 
